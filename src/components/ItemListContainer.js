@@ -1,10 +1,9 @@
 import {Container} from 'react-bootstrap'
-import { ItemCount } from './ItemCount';
-export const ItemListContainer = (props) => {
+import { ItemList } from './ItemList';
+export const ItemListContainer = () => {
   return(
       <Container className="ItemListContainer py-4">
-          {props.text}
-          <ItemCount stock="5" initial="1"/>
+          <ItemList />
       </Container>
   )
 };
