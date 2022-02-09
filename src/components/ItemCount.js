@@ -26,7 +26,7 @@ export const ItemCount = ({stock = 0, initial = 1}) => {
                     <div className="input-group-prepend">
                         <button  className="btn btn-outline-secondary" onClick={reducir}>-</button>
                     </div>
-                    <input type="number" className="form-control text-center" value={qty}/>
+                    <input type="number" className="form-control text-center" value={qty} onChange={()=>true} />
                     <div className="input-group-append">
                         <button className="btn btn-outline-secondary" onClick={aumentar}>+</button>
                     </div>

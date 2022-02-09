@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ItemListContainer } from './components/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer';
 import {NavigationBar} from './components/Navbar'
 
 function App() {
   return (
     <>
       <NavigationBar />
-      <ItemListContainer text="Aquí verás próximamente nuestros productos"/>
+      <ItemDetailContainer />
     </>
   );
 }
