@@ -1,4 +1,5 @@
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { ItemCount } from "./ItemCount";
 
 export const Item = ({data}) => {
@@ -6,7 +7,7 @@ export const Item = ({data}) => {
     <Card>
         <Card.Img variant="top" src={`https://picsum.photos/id/${data.id}/400/300`} />
         <Card.Body>
-            <Card.Title>{data.name}</Card.Title>
+            <Card.Title><Link to={`/product/${data.id}`}>{data.name}</Link></Card.Title>
             <Card.Text>
                 {data.description}
             </Card.Text>
