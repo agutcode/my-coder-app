@@ -2,6 +2,7 @@ export const data = [
     {
         id: 30,
         name: "Agua Con Gas 1,5 lts",
+        category: 1,
         description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
         stock: 86,
         cost: 45,
@@ -9,6 +10,7 @@ export const data = [
     {
         id: 29,
         name: "Agua Sin Gas 1,5 lts",
+        category: 2,
         description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
         stock: 100,
         cost: 140,
@@ -16,6 +18,31 @@ export const data = [
     {
         id: 76,
         name: "Alambrado Chardonnay 750 ml",
+        category: 3,
+        description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+        stock: 92,
+        cost: 575,
+    },
+    {
+        id: 35,
+        name: "Agua Con Gas 1,5 lts",
+        category: 1,
+        description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+        stock: 86,
+        cost: 45,
+    },
+    {
+        id: 28,
+        name: "Agua Sin Gas 1,5 lts",
+        category: 2,
+        description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+        stock: 100,
+        cost: 140,
+    },
+    {
+        id: 96,
+        name: "Alambrado Chardonnay 750 ml",
+        category: 3,
         description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
         stock: 92,
         cost: 575,
