@@ -1,6 +1,5 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { ItemCount } from "./ItemCount";
 
 export const Item = ({data}) => {
   return(
@@ -12,7 +11,6 @@ export const Item = ({data}) => {
                 {data.description}
             </Card.Text>
             <Card.Subtitle className="mb-3 text-success">$ {data.cost}</Card.Subtitle>
-            <ItemCount stock={data.stock} initial="1" />
         </Card.Body>
     </Card>
   )

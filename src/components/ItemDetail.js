@@ -1,7 +1,15 @@
-import { Row, Col, Card } from "react-bootstrap";
+import { useState } from "react";
+import { Row, Col, Card, Alert } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { ItemCount } from "./ItemCount";
 
 export const ItemDetail = ({data}) => {
+  const [cart, setCart] = useState(false);
+  const onAdd = (qty) => { 
+    if(qty > 0){
+      setCart(true)
+    }
+  }
   return(
     <Row>
       <Col>
@@ -13,7 +21,14 @@ export const ItemDetail = ({data}) => {
               {data.description}
           </p>
           <h3 className="mb-3 text-success">$ {data.cost}</h3>
-          <ItemCount stock={data.stock} initial="1" />
+          {cart ? 
+            <>
+              <Alert variant="success">¡Listo! Agregaste el producto al carrito de compras</Alert>
+              <Link to="/cart" className="btn btn-primary">Ir al carrito</Link>
+            </>
+            :
+            <ItemCount stock={data.stock} initial="0" onAdd={onAdd}/>
+          }
       </Col>
     </Row>
   )

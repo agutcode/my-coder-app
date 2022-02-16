@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 
-export const ItemCount = ({stock = 0, initial = 1}) => {
+export const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
     const [qty, setQty] = useState(0)
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export const ItemCount = ({stock = 0, initial = 1}) => {
                 </div>
             </Col>
             <Col>
-                <button className="btn btn-primary">Agregar al carrito</button>
+                <button className="btn btn-primary" onClick={()=>onAdd(qty)}>Agregar al carrito</button>
             </Col>
       </Row>
   )

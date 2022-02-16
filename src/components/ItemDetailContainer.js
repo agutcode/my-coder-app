@@ -1,4 +1,4 @@
-import {Container, Alert} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 import { ItemDetail } from './ItemDetail';
 import { data } from '../products';
 import { useEffect, useState } from 'react';
@@ -24,9 +24,7 @@ export const ItemDetailContainer = () => {
         {product ?         
           <ItemDetail data={product} />
           :
-          <Alert variant="info">
-            <p className="mb-0">Ups! ocurrió un error inesperado por favor intente de nuevo más tarde.</p>
-          </Alert>
+          <p>Cargando...</p>
         }
       </Container>
   )
