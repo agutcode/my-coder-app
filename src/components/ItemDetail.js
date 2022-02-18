@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Row, Col, Card, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 import { ItemCount } from "./ItemCount";
 
 export const ItemDetail = ({data}) => {
   const [cart, setCart] = useState(false);
+
+  const context = useContext(CartContext)
+
   const onAdd = (qty) => { 
     if(qty > 0){
       setCart(true)
+      context.addItem(data, qty)
     }
   }
   return(
